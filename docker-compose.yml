@@ -1,0 +1,17 @@
+services:
+  poste:
+    image: analogic/poste.io
+    container_name: poste
+    restart: always
+    ports:
+      - "443:443"   # access to administration or webmail client
+      - "587:587"   # SMTP con STARTTLS
+      - "993:993"   # IMAPS
+    volumes:
+      - poste_data:/data
+    environment:
+      - POSTE_HOSTNAME=mail.odinbl.net
+      - TZ=America/Bogota
+
+volumes:
+  poste_data:
