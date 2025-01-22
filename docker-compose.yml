@@ -29,6 +29,7 @@ services:
       - "995:995"    # POP3S
       - "143:143"    # IMAP
       - "993:993"    # IMAPS
+      - "8080:80"    # Interfaz web en puerto alternativo
     volumes:
       - /srv/poste/data:/data
     environment:
