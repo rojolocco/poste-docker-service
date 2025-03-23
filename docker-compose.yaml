@@ -3,7 +3,7 @@ services:
     image: analogic/poste.io
     container_name: mailserver
     restart: always
-    network_mode: "host"
+    # network_mode: "host"
     env_file:
       - .env
     expose:
